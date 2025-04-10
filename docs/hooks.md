@@ -47,9 +47,11 @@ Dreams.Meta.Draw(self, ply, DEBUG)
 CLIENT
 {: .label .label-yellow }
 Called during RenderScene after all other render hooks and provides a 2D camera space   
-    
-> **YOU MUST CALL THIS FUNCTION BELOW AT SOME POINT!! NOT DOING SO WILL CAUSE NO HUD TO RENDER INSTEAD!**
+
+
+**YOU MUST CALL THIS FUNCTION BELOW AT SOME POINT!! NOT DOING SO WILL CAUSE NO HUD TO RENDER INSTEAD!**
 {: .warning}
+
 ```lua
 Dreams.Meta.DrawHUD(self, ply, w, h, render_glua)
 ```  
@@ -177,7 +179,9 @@ SHARED
 If defined, will automatically create a DREAMS.NetEntity for easy networking.   
 Will be available right before DREAMS:Init() and re-created if cleaned up  
 Use [self:NetworkVar(type, slot, name)](https://wiki.facepunch.com/gmod/Entity:NetworkVar) to create Get(name) & Set(name) functions  
-> Int Slot 31 is reserved to mark the dreams_entity to the associated dream
+
+
+Int Slot 31 is reserved to mark the dreams_entity to the associated dream
 {: .note }
 * * *
 
