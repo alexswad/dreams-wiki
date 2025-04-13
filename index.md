@@ -6,7 +6,7 @@ nav_order: 1
 
 # Welcome to the DREAMS wiki!
 This project is for creating "maps within's maps", featuring a networked custom collision handler that works off of converted VMFs
-### This is a very WIP and things are expected to be added/changed
+### This is a very WIP project and things are expected to be added/changed
 
 Note: You are also basically making things from scratch to work clientside only or rigging things terribly serverside, this is the catch. However, a lot of things are possible and hopefully upcoming mods will help expand the horizons
 
