@@ -16,6 +16,8 @@ Functions under Dreams.Lib.*
 Completes a ray-trace aganist a DreamPhys table, usually \<Room\>.phys  
 Returns `hit`, `fraction`, `normal`
 
+* * *
+
 ## Intersections
 ### Lib.IntersectABCylinderWithAABB
 {: .d-inline-block }
@@ -25,14 +27,18 @@ Calculates if an axis-bound cylinder is within an AABB container
 Returns `result: bool`, `normal: Vector`, `penetration-dist: Vector`
 - Origin starts the bottom of the cylinder, easier for player collisions
 
+* * *
+
 ### Lib.IntersectSphereWithAABB
 {: .d-inline-block }
 (sphereOrg: Vector, radius: float, boxmin: Vector, boxmax: Vector)
 {: .d-inline .fs-4 .text-blue-100 }
 
 Calculates if a sphere is within an AABB container  
-Returns `result: bool`, `normal: Vector`, `penetration-dist: Vector`   
- 
+Returns `result: bool`, `normal: Vector`, `penetration-dist: Vector` 
+
+* * *
+
 ### Lib.IntersectABCylinderWithOBB
 {: .d-inline-block }
 (cylOrg: Vector, cylRadius: float, cylHeight: float, boxorg: Vector, boxangle: Angle, boxmin: Vector, boxmax: Vector, sizex: int, sizey: int, sizez: int)
@@ -42,12 +48,16 @@ Calculates if an axis-bound cylinder is within an OBB container
 Returns `result: bool`, `normal: Vector`, `penetration-dist: Vector`   
 - Origin starts the bottom of the cylinder, easier for player collisions
 
+* * *
+
 ### Lib.IntersectSphereWithOBB
 {: .d-inline-block }
 (sphereOrg: Vector, radius: float, boxorg: Vector, boxangle: Angle, boxmin: Vector, boxmax: Vector)
 {: .d-inline .fs-4 .text-blue-100 }
 Calculates if a sphere is within an OBB container  
 Returns `result: bool`, `normal: Vector`, `penetration-dist: Vector`   
+
+* * *
 
 ## Vector Math
 ### Lib.PlaneToNormal
@@ -56,18 +66,23 @@ Returns `result: bool`, `normal: Vector`, `penetration-dist: Vector`
 {: .d-inline .fs-4 .text-blue-100 }  
 Returns `normal: Vector` from three points defining a plane
 
+* * *
+
 ### Lib.InsideOutTest
 {: .d-inline-block }
 (p1: Vector, p2: Vector, p3: Vector, inside_point: Vector)
 {: .d-inline .fs-4 .text-blue-100 }
 Returns `result: bool` whether `inside_point` is on the same side as `p3` of the line defined by `p1` and `p2`    
 
+* * *
 ### Lib.RotationMatrixFromNormals
+
 {: .d-inline-block }
 (normal1: Vector, normal2: Vector, normal3: Vector)
 {: .d-inline .fs-4 .text-blue-100 }  
 Returns a rotational `matrix: VMatrix` from three orthogonal normals
 
+* * *
 
 ### Lib.MinMaxVecs
 {: .d-inline-block }
@@ -75,11 +90,15 @@ Returns a rotational `matrix: VMatrix` from three orthogonal normals
 {: .d-inline .fs-4 .text-blue-100 }
 Returns a new `min: Vector, max: Vector` set with `vector` included
 
+* * *
+
 ### Lib.HalfExtentsFromBox
 {: .d-inline-block }
 (min, max)
 {: .d-inline .fs-4 .text-blue-100 }
 Returns a `table {1 = x, 2 = y, 3 = z}` with the half extents of each axes
+
+* * *
 
 ### Lib.IsSquare
 {: .d-inline-block }
@@ -87,14 +106,20 @@ Returns a `table {1 = x, 2 = y, 3 = z}` with the half extents of each axes
 {: .d-inline .fs-4 .text-blue-100 }
 Returns `result: bool` if a table of verts on a plane form a square
 
+* * *
+
 ### Lib.MagnitudeToNormal
 {: .d-inline-block }
 (xdelta: float, ydelta: float, zdelta: float)
 {: .d-inline .fs-4 .text-blue-100 }
 
+* * *
+
 Returns the `normal: Vector` facing the direction of the axis of the highest magnitude   
 Used by Cylinder and Sphere intersections   
 `delta` variables use their absolute value internally
+
+* * *
 
 ### Lib.HighestMag
 {: .d-inline-block }
@@ -103,6 +128,8 @@ Used by Cylinder and Sphere intersections
 forgot why I made this might be removed
 {: .label .label-red }
 Returns `string: x/y/z` corresponding to the axis with the highest magnitude
+
+* * *
 
 ## Utility
 ### Lib.RectToMeshEx
