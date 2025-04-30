@@ -3,7 +3,7 @@ title: Hooks
 layout: default
 nav_order: 5
 ---
-
+Hooks that can be overriden on the DREAMS metatable
 - TOC
 {:toc}
 
