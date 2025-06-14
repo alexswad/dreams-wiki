@@ -58,13 +58,9 @@ CLIENT
 Called during RenderScene after all other render hooks and provides a 2D camera space   
 
 
-**YOU MUST CALL THIS FUNCTION BELOW AT SOME POINT!! NOT DOING SO WILL CAUSE NO HUD TO RENDER INSTEAD!**
-{: .warning}
-
 ```lua
-Dreams.Meta.DrawHUD(self, ply, w, h, render_glua)
-```  
-- if `render_glua` is set to false the default GLua panel containing Derma Elements will not render
+Dreams.Meta.DrawHUD(self, ply, w, h)
+```
 
 * * *
 
@@ -224,10 +220,11 @@ SHARED
 {: .d-inline }
 PREDICTED
 {: .label .label-green }
-Called at the start of a move command, setup the players velocity and process their input here         
+Called at the start of a move command, setup the players velocity and process their input here.    
+Must return `true`          
 See [GM:SetupMove](https://wiki.facepunch.com/gmod/GM:SetupMove)       
-StartMove can be replaced with DREAMS.StartMoveFly ex. `DREAMS.StartMove = DREAMS.StartMoveFly` either for debugging or for gameplay
-
+- StartMove can be replaced with DREAMS.StartMoveFly ex. `DREAMS.StartMove = DREAMS.StartMoveFly` either for debugging or for gameplay
+- Dreams.Meta.StartMove can be called with extra parameters `jump` and `grav` to override DREAMS default values
 ### DREAMS:DoMove
 {: .d-inline }
 (ply, mv)

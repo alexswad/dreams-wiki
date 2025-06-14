@@ -4,7 +4,7 @@ layout: default
 nav_order: 20
 parent: Functions
 ---
-Functions under Dreams.VMF.*
+Functions under `Dreams.VMF.*`
 - TOC
 {:toc}
 

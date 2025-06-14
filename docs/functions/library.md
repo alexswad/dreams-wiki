@@ -4,17 +4,9 @@ layout: default
 nav_order: 15
 parent: Functions
 ---
-Functions under Dreams.Lib.*
+Functions under `Dreams.Lib.*`
 - TOC
 {:toc}
-
-## Traces
-### Lib.TraceRayPhys
-{: .d-inline-block }
-(phys: DreamPhys, start: Vector, dir: Vector, distance)
-{: .d-inline .fs-4 .text-blue-100 }
-Completes a ray-trace aganist a DreamPhys table, usually \<Room\>.phys  
-Returns `hit`, `fraction`, `normal`
 
 * * *
 
@@ -112,28 +104,33 @@ Returns `result: bool` if a table of verts on a plane form a square
 {: .d-inline-block }
 (xdelta: float, ydelta: float, zdelta: float)
 {: .d-inline .fs-4 .text-blue-100 }
-
-* * *
-
 Returns the `normal: Vector` facing the direction of the axis of the highest magnitude   
 Used by Cylinder and Sphere intersections   
 `delta` variables use their absolute value internally
 
 * * *
 
-### Lib.HighestMag
-{: .d-inline-block }
-(xdelta: float, ydelta: float, zdelta: float)
-{: .d-inline .fs-4 .text-blue-100 }
-forgot why I made this might be removed
-{: .label .label-red }
-Returns `string: x/y/z` corresponding to the axis with the highest magnitude
-
-* * *
-
-## Utility
 ### Lib.RectToMeshEx
 {: .d-inline-block }
 (l, w, h, origin: Vector, [ignore: table, reverse_faces: bool, utex_add, vtex_add])
 {: .d-inline .fs-4 .text-blue-100 }
 Creates a rectangle for rendering meshes, `origin` starts in the left corner
+
+* * *
+
+## DreamPhys Traces
+### Lib.TraceRayPhys
+{: .d-inline-block }
+(phys: DreamPhys, start: Vector, dir: Vector, dist)
+{: .d-inline .fs-4 .text-blue-100 }
+Performs a trace on a DreamPhys object   
+Returns `bool: hit`, `fraction`, `Vector: hitnormal`, `DreamSolid: hitsolid`, `DreamSide: hitside`
+
+* * *
+
+### Lib.IntersectCylPhys
+{: .d-inline-block }
+(phys: DreamPhys, origin: Vector, rad, height)
+{: .d-inline .fs-4 .text-blue-100 }
+Performs a Cylinder intersection on a DreamPhys object   
+Returns `Vector: hitnormal`, `Vector: dist`, `DreamSolid: hitsolid`
