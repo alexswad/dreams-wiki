@@ -59,4 +59,4 @@ Place the DREAM file in your addons `data_static/` folder in a place where it wo
    
 Setting `DEBUG` to 1 and running `lua_run player.GetAll()[1]:SetDream("mydream")` should show your DreamsPhys model:   
      
-![gs_vmf](/assets/images/gs_vmf.jpg)
+![gs_vmf]({{ site.baseurl }}/assets/images/gs_vmf.jpg)
