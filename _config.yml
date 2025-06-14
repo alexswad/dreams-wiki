@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: DREAMS Wiki
 description: A library for Garry's Mod to create other worlds
-url: https://alexswad.github.io # the subpath of your site, e.g. /blog
+url: /dreams-wiki # the subpath of your site, e.g. /blog
 theme: just-the-docs
 
 defaults:
